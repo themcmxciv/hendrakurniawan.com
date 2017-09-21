@@ -1,0 +1,239 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-family: Lato, sans-serif;
+  background: #eceff1;
+  margin: 0;
+}
+
+h1, h3 {
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  color: #263238;
+  font-size: 96px;
+  font-family: Montserrat;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+h3 {
+  color: #455a64;
+  font-family: Lato;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+header, section, footer {
+  position: relative;
+}
+
+header div, section div, footer div {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+header {
+  height: 30%;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+}
+
+section {
+  height: 40%;
+}
+
+section div, footer div {
+  top: 40%;
+}
+
+section hr {
+  width: 32px;
+  height: 8px;
+  background: #004d40;
+  border: none;
+  margin: 16px auto;
+}
+
+footer {
+  height: 30%;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #455a64;
+  border-radius: 50%;
+  margin-right: 40px;
+  transition: all ease .3s;
+}
+
+footer ul li:hover {
+  border-color: #eceff1;
+}
+
+footer ul li a {
+  display: block;
+  font-size: 24px;
+  line-height: 48px;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all ease .3s;
+}
+
+footer ul li a span {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.icon-facebook {
+  color: #3b5999;
+}
+
+.icon-facebook:hover {
+  background: #3b5999;
+}
+
+.icon-instagram {
+  color: #e4405f;
+}
+
+.icon-instagram:hover {
+  background: #e4405f;
+}
+
+.icon-github {
+  color: #131418;
+}
+
+.icon-github:hover {
+  background: #131418;
+}
+
+.icon-linkedin {
+  color: #0077B5;
+}
+
+.icon-linkedin:hover {
+  background: #0077B5;
+}
+
+.icon-mail {
+  color: #34465d;
+}
+
+.icon-mail:hover {
+  background: #34465d;
+}
+
+[class^="icon-"]:hover, [class*=" icon-"]:hover {
+  color: #eceff1;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello.eot?61712447');
+  src: url('font/fontello.eot?61712447#iefix') format('embedded-opentype'),
+       url('font/fontello.woff2?61712447') format('woff2'),
+       url('font/fontello.woff?61712447') format('woff'),
+       url('font/fontello.ttf?61712447') format('truetype'),
+       url('font/fontello.svg?61712447#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-mail:before { content: '\e800'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-github:before { content: '\f09b'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+
+.tooltip {
+  position: relative;
+  display: block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: #455A64;
+  color: #eceff1;
+  text-align: center;
+  border-radius: 3px;
+  padding: 4px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -50px;
+  opacity: 0;
+  transition: all ease .3s;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #455A64 transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
